@@ -1,0 +1,33 @@
+{
+  "name": "chatty",
+  "version": "0.0.0",
+  "description": "lets things talk to one another",
+  "main": "index.js",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.1.x"
+  },
+  "scripts": {
+    "test": "mocha test/*_spec.pogo"
+  },
+  "repository": "",
+  "author": "@joshski",
+  "license": "",
+  "dependencies": {
+    "should": "latest",
+    "mocha": "latest",
+    "pogo": "latest",
+    "express": "latest",
+    "mongodb": "latest",
+    "httpism": "latest",
+    "crypto": "latest",
+    "passport": "latest",
+    "passport-google-oauth": "latest",
+    "ejs": "latest",
+    "supertest": "latest",
+    "passport-stub": "latest",
+    "coffee-script": "latest",
+    "express-partials": "~0.1.1",
+    "socket.io": "~0.9.14"
+  }
+}

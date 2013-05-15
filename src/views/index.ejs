@@ -1,0 +1,27 @@
+<% if (user) { %>
+  
+  <section id="chat" ng-controller="ChatController">
+  
+    <h2>Hello, <%= user.displayName %>.</h2>
+  
+    <form ng-submit="postMessage()">
+      <label for="message">Message</label>
+      <input type="text" id="message" placeholder="Chat..."
+             ng-model="messageText" />
+             
+      <input type="submit" value="Post" />
+    </form>
+  
+    <ul id="messages">
+      <li ng-repeat="message in messages">
+        {{message.text}}
+      </li>
+    </ul>
+  
+  </section>
+  
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="/js/angular.js"></script>
+  <script type="text/javascript" src="/client"></script>
+  
+<% } %>
