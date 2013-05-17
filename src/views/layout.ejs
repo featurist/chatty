@@ -2,20 +2,20 @@
 <html ng-app="Chatty">
 	<head>
 		<title>Chatty</title>
+    <link rel="stylesheet" type="text/css" href="/css/app.css"></link>
 	</head>
 	<body>
-		<% if (!user) { %>
-			<p>
-			  <a href="/">Home</a> | 
-			  <a href="/auth/google">Login with Google</a>
-			</p>
-		<% } else { %>
-			<p>
-			  <a href="/">Home</a> | 
-			  <a href="/account">Account</a> | 
-			  <a href="/logout">Log Out</a>
-			</p>
-		<% } %>
+    <div id="header">
+      <div id="links">
+    		<% if (!user) { %>
+    		  <a href="/auth/google">Login with Google</a>
+    		<% } else { %>
+    		  <a href="/account"><%= user.displayName %></a>
+    		  <a href="/logout" id="logout">Log Out</a>
+    		<% } %>
+      </div>
+    </div>
+    
 		<%- body %>
 	</body>
 </html>

@@ -28,6 +28,7 @@
     "passport-stub": "latest",
     "coffee-script": "latest",
     "express-partials": "~0.1.1",
-    "socket.io": "~0.9.14"
+    "socket.io": "~0.9.14",
+    "mongoose": "latest"
   }
 }

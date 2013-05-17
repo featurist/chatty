@@ -1,0 +1,136 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#header {
+  color: #ffffff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #444444;
+  height: 30px;
+  z-index: 999;
+  text-align: right;
+}
+#header a, #header a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#header a:hover {
+  background-color: #222222;
+}
+#header #links {
+  margin: 6px;
+  width: 700px;
+}
+#header #links #logout {
+  color: #cccccc;
+  font-size: 0.8em;
+}
+#subheader {
+  position: fixed;
+  top: 30px;
+  left: 0px;
+  right: 0px;
+  background-color: #efefef;
+  border-bottom: 2px solid #cccccc;
+  height: 30px;
+  z-index: 999;
+}
+#subheader h2 {
+  margin: 0;
+  margin-left: 8px;
+  margin-top: 4px;
+  font-size: 1em;
+}
+
+#newPost {
+  width: 100%;
+  height: 60px;
+  background-color: #efefef;
+  border-top: 2px solid #cccccc;
+  position: fixed; bottom: 0; left: 0; right: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 999;
+}
+#newPost form {
+  margin-left: 10px;
+  margin-top: 8px;
+  width: 700px;
+}
+#newPost label {
+  display: none;
+}
+#message {
+  position: absolute;
+  width: 100%;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  left: 118px;
+  right: 90px;
+  width: 490px;
+  border-left: 1px solid #ccc;
+  resize: none;
+  font-size: 14px;
+  padding-left: 3px;
+  padding-top: 3px;
+}
+#newPostSubmit {
+  position: absolute;
+  height: 40px;
+  width: 90px;
+  left: 620px;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1em;
+  color: #888888;
+  border-top: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  background-color: #efefef;
+  border-radius: 6px;
+  -webkit-appearance: button;
+}
+#posts {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 700px;
+  margin-bottom: 80px;
+  margin-top: 80px;
+}
+#posts li {
+  list-style-type: none;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+  padding-top: 5px;
+  min-height: 24px;
+  border-top: 1px solid #efefef;
+}
+#posts .user {
+  font-size: 0.9em;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  color: #777777;
+  text-align: right;
+}
+#posts .date {
+  font-size: 0.8em;
+  position: absolute;
+  color: #AFAFAF;
+  right: 0;
+}
+#posts .text {
+  margin-left: 115px;
+  display: block;
+  width: 480px;
+  font-size: 14px;
+}
