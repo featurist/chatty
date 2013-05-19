@@ -12,9 +12,9 @@ passport.deserializeUser @(obj, done)
     done (nil, obj)
 
 verify user (access token, refresh token, profile, done) =
+    console.log 'verify user'
     // User.findOrCreate(profile.id)
     process.next tick
-        console.log(profile)
         done(nil, profile)
 
 passport.use (

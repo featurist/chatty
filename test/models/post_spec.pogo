@@ -18,8 +18,10 @@ describe 'Post'
             post = @new Post {
                 text = 'hola'
                 user = {
-                    given name = 'dave'
-                    family name = 'brown'
+                    name = {
+                        given name = 'dave'
+                        family name = 'brown'
+                    }
                 }
             }
             post.save!

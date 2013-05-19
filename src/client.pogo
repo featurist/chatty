@@ -27,8 +27,13 @@ app.controller 'ChatController' @($scope, socket, $http)
     
     posts request.error @(data, status, headers, config)
         console.log("ERROR", arguments)
-
+    
+    $scope.room = []
     $scope.posts = []
+    
+    dedupe room () =
+        $scope.room = _.uniq ($scope.room) @(user)
+            user.id
  
     $scope.postMessage() =
         socket.emit 'post' { text = $scope.messageText }
@@ -36,7 +41,19 @@ app.controller 'ChatController' @($scope, socket, $http)
         
     socket.on 'post' @(message)
         $scope.posts.push (message)
-        
+    
+    socket.on 'welcome' @(data)
+        $scope.room = data.room
+        dedupe room ()
+    
+    socket.on 'connect' @(user)
+        $scope.room.push(user)
+        dedupe room ()
+    
+    socket.on 'disconnect' @(user)
+        $scope.room = _.reject ($scope.room) @(u)
+            u.id == user.id
+
 app.directive 'timeago' @($timeout)
     timeago (scope, element, attrs) =
         refresh date() =

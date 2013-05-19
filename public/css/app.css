@@ -46,6 +46,20 @@
   margin-top: 4px;
   font-size: 1em;
 }
+#subheader #presence {
+  margin: 0;
+  padding: 0;
+  margin-top: 8px;
+  margin-left: 8px;
+  font-size: 0.8em;
+  color: #777777;
+}
+#subheader #presence li {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 
 #newPost {
   width: 100%;

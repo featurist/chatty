@@ -1,9 +1,14 @@
 <% if (user) { %>
   
-  <section id="chat" ng-controller="ChatController">
+  <section id="chat" ng-controller="ChatController" ng-show="room.length > 0">
     
     <div id="subheader">
-      
+      <ul id="presence">
+        <label>Online:</label>
+        <li ng-repeat="user in room">
+          {{user.name.givenName}}
+        </li>
+      </ul>
     </div>
     
     <div id="newPost">
@@ -30,6 +35,7 @@
   <script type="text/javascript" src="/socket.io/socket.io.js"></script>
   <script type="text/javascript" src="/js/angular.js"></script>
   <script type="text/javascript" src="/js/moment.js"></script>
+  <script type="text/javascript" src="/js/underscore.js"></script>
   <script type="text/javascript" src="/client"></script>
   
 <% } %>
