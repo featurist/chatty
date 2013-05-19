@@ -2,6 +2,7 @@ app = require './app'
 db = require './db'
 sockets = require './sockets'
 socket auth = require './socket_auth'
+post api = require './post_api'
 
 port = process.env.PORT || 3000
 
@@ -9,6 +10,7 @@ server = require('http').Server(app)
 io = require('socket.io').listen(server)
 
 socket auth.apply to (io, app)
+post api.apply to (io, app)
 
 io.sockets.on 'connection' @(socket)
     sockets.connect(socket, app)
